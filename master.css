@@ -1,0 +1,139 @@
+:root {
+--orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+--p-color: hsla(0, 0%, 100%, 0.75);
+--h-button-color : hsl(0, 0%, 95%);
+--font1 : 'Big Shoulders Display', cursive;
+--font2: 'Lexend Deca', sans-serif;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background-color: var(--h-button-color);
+  min-height: 100vh;
+}
+
+.all {
+  display: flex;
+  margin: 20px auto;
+  width: 60%;
+  min-width: 550px;
+  min-height: 70vh;
+  height: fit-content;
+}
+.fcontainer,
+.scontainer,
+.tcontainer {
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
+  width: calc(100% / 3);
+}
+
+.fcontainer {
+  background-color: var(--orange);
+  border-top-left-radius : 10px;
+  border-bottom-left-radius : 10px;
+}
+
+.scontainer {
+  background-color: var(--Dark-cyan);
+}
+
+.tcontainer {
+  background-color: var(--Very-dark-cyan);
+  border-top-right-radius : 10px;
+  border-bottom-right-radius : 10px;
+}
+.fcontainer > *,
+.scontainer > *,
+.tcontainer > * {
+  margin: 20px 0px;
+}
+
+img {
+  width: 80px;
+  height: 50px;
+}
+
+h3 {
+  text-transform: uppercase;
+  color: var(--h-button-color);
+  font-family: var(--font1);
+  font-size: 45px;
+  font-weight: 700;
+}
+
+p{
+  color: var(--p-color);
+  font-family: var(--font2);
+}
+
+span {
+  text-transform: uppercase;
+}
+
+button {
+  all:unset;
+  background-color: var(--h-button-color);
+  border-radius: 25px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 14px 0px;
+  font-family: var(--font2);
+  cursor: pointer;
+  transition: background-color .3s 0s;
+  width: 60%;
+  min-width: 120px;
+  border : 2px solid var(--h-button-color);
+}
+.fcontainer button {
+  color : var(--orange)
+}
+.scontainer button {
+  color : var(--Dark-cyan)
+}
+.tcontainer button {
+  color : var(--Very-dark-cyan)
+}
+button:hover {
+  border : 2px solid var(--h-button-color);
+  background-color: transparent;
+  color: var(--h-button-color);
+}
+
+@media (max-width : 549px) {
+  .all {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    min-width: 200px;
+  }
+
+  .fcontainer,
+.scontainer,
+.tcontainer {
+  padding: 8%;
+  width: calc(100%);
+  }
+.fcontainer {
+  border-top-left-radius : 10px;
+  border-top-right-radius : 10px;
+  border-bottom-left-radius : 0px;
+  }
+.tcontainer {
+  border-bottom-left-radius : 10px;
+  border-bottom-right-radius : 10px;
+  border-top-right-radius : 0px;
+  }
+}
